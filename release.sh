@@ -15,7 +15,7 @@ releaseBranch=release-$versionLabel
 git checkout -b $releaseBranch $devBranch
  
 # file in which to update version number
-versionFile="version.txt"
+versionFile="./version.txt"
  
 # find version number assignment ("= v1.5.5" for example)
 # and replace it with newly specified version number
