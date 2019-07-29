@@ -2,7 +2,7 @@
 
 # current Git branch
 branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
-echo branch
+
 # v1.0.0, v1.5.2, etc.
 versionLabel=v$1
 
@@ -15,7 +15,7 @@ releaseBranch=release-$versionLabel
 git checkout -b $releaseBranch $devBranch
  
 # file in which to update version number
-versionFile="./version.txt"
+versionFile="version.txt"
  
 # find version number assignment ("= v1.5.5" for example)
 # and replace it with newly specified version number

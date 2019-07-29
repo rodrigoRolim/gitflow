@@ -1,12 +1,11 @@
-
 #!/bin/bash
 
 version=$1
 text=$2
 branch=$(git rev-parse --abbrev-ref HEAD)
 repo_full_name=$(git config --get remote.origin.url | sed 's/.*:\/\/github.com\///;s/.git$//')
-token=$(git config --global github.token d2442bb851bfb0810ed794e1340b3df7bbffa341)
-
+token=$(git config --global github.token)
+echo $token
 generate_post_data()
 {
   cat <<EOF
