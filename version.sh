@@ -4,7 +4,7 @@ version="$1"
 major=0
 minor=0
 build=0
-echo $version
+
 # break down the version number into it's components
 regex="([0-9]+).([0-9]+).([0-9]+)"
 if [[ $version =~ $regex ]]; then
@@ -14,7 +14,7 @@ if [[ $version =~ $regex ]]; then
 fi
 
 # check paramater to see which number to increment
-echo $2
+
 if [[ "$2" == "feature" ]]; then
   minor=$((minor + 1))
 elif [[ "$2" == "bug" ]]; then
